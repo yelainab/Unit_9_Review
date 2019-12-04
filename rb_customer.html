@@ -7,8 +7,8 @@
       Review Assignment
 
       Red Ball Pizza Customer Information
-      Author: 
-      Date:   
+      Author:  yelaina buford 
+      Date:   12/3/19
 
       Filename:   rb_customer.html
 
@@ -19,6 +19,9 @@
    <title>Red Ball Pizza Customer Form</title>
    <link href="rb_base.css" rel="stylesheet" />
    <link href="rb_styles2.css" rel="stylesheet" />
+   <link href="rb_forms2.css" rel="stylesheet" />
+   <link href="rb_validate.css" rel="stylesheet" />
+   <script src="rb_formsubmit2.js" ></script>
 </head>
 
 <body>
@@ -45,7 +48,20 @@
          want to place your order over the phone, call us at
          <a href="tel:+13865557499">(386) 555-7499</a>.</p>
          
-         
+      <form>
+         <div>
+            <label for="nameBox">Name*</label>
+            <input id="nameBox" required name="custName" placeholder="first and last name" />
+         </div>
+         <div>
+            <label for="phoneBox">phone*</label>
+            <input id="phoneBox" required pattern="^\d{10}$|^(\(\d{3}\)\s*)?\d{3}[\s-]?\d{4}$"
+            name="custPhone" placeholder="(nnn)nnn-nnnn" />
+         </div>
+         <div>
+            <input name="" id="delivery">
+         </div>
+      </form>
    </section>
 
    <footer>
