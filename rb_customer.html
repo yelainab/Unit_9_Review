@@ -44,7 +44,7 @@
       <p>Thank you for using our online ordering form for quick and easy
          orders. Please enter your name and phone number and whether you
          want to place an order for delivery or pickup. Note that required
-         values are marked by an asterisk (*). If you
+         ids marked by an asterisk (*). If you
          want to place your order over the phone, call us at
          <a href="tel:+13865557499">(386) 555-7499</a>.</p>
          
@@ -59,7 +59,24 @@
             name="custPhone" placeholder="(nnn)nnn-nnnn" />
          </div>
          <div>
-            <input name="" id="delivery">
+            <label for="delivery">delivery</label>
+            <input name="orderType" id="delivery" type="radio">
+            <label for="pickup">pickup</label>
+            <input name="orderType" id="pickup" type="radio">
+         </div>
+         <fieldset id="deliveryInfo">
+            <legend>Delivery Option</legend>
+            <textarea id="addressBox" name="delAddress" placeholder="Enter delivery address"></textarea>
+            <label for="delBox">Delivery Time (Leave blank for earliest pickup)</label>
+            <input id="delox" name="delTime" type="time" />
+         </fieldset>
+         <fieldset id="pickupInfo">
+            <legend>Pickup Option</legend>
+            <label for="pickupBox">Pickup Time (Leave blank for earliest pickup)</label>
+            <input id="pickupBox" name="pickupTime" type="time" disabled />
+         </fieldset>
+         <div>
+               <input type="submit" value="Begin Building your Order" />
          </div>
       </form>
    </section>
