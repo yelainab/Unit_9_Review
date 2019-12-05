@@ -48,7 +48,7 @@
          want to place your order over the phone, call us at
          <a href="tel:+13865557499">(386) 555-7499</a>.</p>
          
-      <form>
+         <form action="http://www.example.com/redball/customer" method="POST">
          <div>
             <label for="nameBox">Name*</label>
             <input id="nameBox" required name="custName" placeholder="first and last name" />
@@ -59,10 +59,10 @@
             name="custPhone" placeholder="(nnn)nnn-nnnn" />
          </div>
          <div>
-            <label for="delivery">delivery</label>
             <input name="orderType" id="delivery" type="radio">
-            <label for="pickup">pickup</label>
+            <label for="delivery">delivery</label>
             <input name="orderType" id="pickup" type="radio">
+            <label for="pickup">pickup</label>
          </div>
          <fieldset id="deliveryInfo">
             <legend>Delivery Option</legend>
